@@ -71,8 +71,10 @@ class TicketControl extends React.Component {
     const { dispatch } = this.props;
     const action = a.addTicket(ticketToEdit);
     dispatch(action);
-    this.setState({editing: false});
-    this.setState({selectedTicket: null});
+    this.setState({
+      editing: false,
+      selectedTicket: null
+    });
   }
 
   handleDeletingTicket = (id) => {
